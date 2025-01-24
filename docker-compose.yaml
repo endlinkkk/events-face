@@ -1,0 +1,13 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: app
+    ports:
+      - "${DJANGO_PORT}:8000"
+    command: "uv run manage.py runserver"
+    env_file:
+      - ./.env
+    volumes:
+      - .:/app/
