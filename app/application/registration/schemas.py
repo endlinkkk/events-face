@@ -3,7 +3,7 @@ from datetime import datetime
 from pydantic import BaseModel, EmailStr
 
 from app.application.schemas import BaseQueryResponseSchema
-from app.dtos.events import EventDTO, VisitorDTO
+from app.domain.dtos.events import EventDTO, VisitorDTO
 
 
 class EventSchema(BaseModel):

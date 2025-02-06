@@ -6,12 +6,12 @@ class Settings(BaseSettings):
 
     EVENTS_PROVIDER_ADDR: str
 
+    REDIS_PASSWORD: str
+    REDIS_USER: str
+    REDIS_USER_PASSWORD: str
+    REDIS_PORT: int
+    REDIS_HOST: str
+
     @property
     def get_events_uri(self) -> str:
         return self.EVENTS_PROVIDER_ADDR
-
-    def register_events_uri(self, event_id: str) -> str:
-        return f"{self.EVENTS_PROVIDER_ADDR}{event_id}/register/"
-
-
-settings = Settings()

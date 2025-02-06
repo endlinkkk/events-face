@@ -1,4 +1,4 @@
-from app.exceptions.base import ApplicationException
+from app.domain.exceptions.base import ApplicationException
 
 
 class EventListRequestException(ApplicationException):
